@@ -15,8 +15,6 @@ Enables Airplay audio streaming to Home Assistant.
 
 ## Repository
 
-To install use this [repository](https://github.com/v3rm0n/hassio)
-
 [aarch64-shield]: https://img.shields.io/badge/architecture-aarch64-blue.svg
 [armhf-shield]: https://img.shields.io/badge/architecture-armhf-blue.svg
 [armv7-shield]: https://img.shields.io/badge/architecture-armv7-blue.svg
