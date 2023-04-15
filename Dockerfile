@@ -6,6 +6,17 @@ ENV LANG C.UTF-8
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
+##### NQPTP #####
+RUN git clone https://github.com/mikebrady/nqptp
+WORKDIR /nqptp
+RUN git checkout "master"
+RUN autoreconf -i
+RUN ./configure
+RUN make
+RUN make install
+WORKDIR /
+##### NQPTP END #####
+
 RUN apk -U add \
         git \
         build-base \
@@ -19,6 +30,8 @@ RUN apk -U add \
         soxr-dev \
         avahi-dev \
         libconfig-dev \
+        libsndfile-dev \
+        mosquitto-dev \
  && cd /root \
  && git clone https://github.com/mikebrady/shairport-sync.git \
  && cd shairport-sync \
@@ -30,6 +43,9 @@ RUN apk -U add \
         --with-ssl=openssl \
         --with-soxr \
         --with-metadata \
+        --with-mqtt-client \
+        --with-convolution \
+       #  --with-apple-alac \
  && make \
  && make install \
  && cd / \
@@ -56,6 +72,7 @@ RUN apk -U add \
         soxr \
         avahi \
         libconfig \
+        mosquitto \
  && rm -rf \
         /etc/ssl \
         /var/cache/apk/* \
