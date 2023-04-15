@@ -6,17 +6,6 @@ ENV LANG C.UTF-8
 # Set shell
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
-##### NQPTP #####
-RUN git clone https://github.com/mikebrady/nqptp
-WORKDIR /nqptp
-RUN git checkout "master"
-RUN autoreconf -i
-RUN ./configure
-RUN make
-RUN make install
-WORKDIR /
-##### NQPTP END #####
-
 RUN apk -U add \
         git \
         build-base \
