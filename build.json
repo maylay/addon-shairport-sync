@@ -1,11 +1,7 @@
 {
     "squash": true,
     "build_from": {
-        "aarch64": "hassioaddons/base-aarch64:13.2.1",
-        "amd64": "hassioaddons/base-amd64:13.2.1",
-        "armhf": "hassioaddons/base-armhf:13.2.1",
-        "armv7": "hassioaddons/base-armv7:13.2.1",
-        "i386": "hassioaddons/base-i386:13.2.1"
+        "armv7": "hassioaddons/base-armv7:13.2.1"
     },
     "args": {}
 }
