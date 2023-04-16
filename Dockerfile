@@ -34,6 +34,7 @@ RUN apk -U add \
         --with-metadata \
         --with-mqtt-client \
         --with-convolution \
+        --sysconfdir=/config \
        #  --with-apple-alac \
  && make \
  && make install \
