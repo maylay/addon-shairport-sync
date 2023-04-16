@@ -20,8 +20,8 @@ RUN apk -U add \
         avahi-dev \
         libconfig-dev \
         libsndfile-dev \
-        mosquitto-dev \
- && cd /root \
+        mosquitto-dev
+RUN cd /root \
  && git clone https://github.com/mikebrady/shairport-sync.git \
  && cd shairport-sync \
  && autoreconf -i -f \

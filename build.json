@@ -1,3 +1,7 @@
 {
-    "squash": true
+    "squash": true,
+    "build_from": {
+        "aarch64": "hassioaddons/base:8.0.6"
+    },
+    "args": {}
 }
