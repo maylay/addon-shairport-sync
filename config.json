@@ -13,6 +13,7 @@
     "amd64",
     "i386"
   ],
+  "init": false,
   "boot": "auto",
   "hassio_api": true,
   "homeassistant_api": true,
